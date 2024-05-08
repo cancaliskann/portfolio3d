@@ -1,6 +1,7 @@
 "useclient"
 import { BtnList } from '@/app/data'
 import React from 'react'
+import NavButton from './NavButton';
 
 const Navigation = () => {
 
@@ -16,16 +17,8 @@ const Navigation = () => {
                 const radius = 'calc(20vw - 1rem)'
                 const x = `calc(${radius}*${Math.cos(angleRad )})`
                 const y = `calc(${radius}*${Math.sin(angleRad )})`
-
-                console.log(x,y);
-
                 
-                
-                return <button key={index} className='absolute' style={{
-                    transform: `translate(${x}, ${y})`
-                }}
-                
-                > {btn.label}</button>
+                return <NavButton key={btn.label} x={x} y={y} {...btn} />
             })
         }
     </div>
