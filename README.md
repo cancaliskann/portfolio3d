@@ -7,8 +7,9 @@
 @@ text in purple (and bold)@@
 ``` -->
 ```diff
-- GLTF, PLAYGROUND.COM , SKETCHFAB,
-! Kinda Placeholders for now
++ REACT, TAILWINDCSS, NEXT.JS,
+- GLTF, PLAYGROUND.COM , SKETCHFAB LUCIDE ICONS,
+! Kinda Placeholders for now lol
 ```
 
 
