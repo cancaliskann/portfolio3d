@@ -5,9 +5,10 @@ import { useState } from 'react'
 
 const createFirefly= () => ({
     id: Math.random(),
-    top: `${Math.random()*100}%`,
-    left: `${Math.random()*100}%`,
-    animationDuration:`${Math.random()*5 + 5}s`,
+    top: `${Math.random()* 100}%`,
+    left: `${Math.random()* 100}%`,
+    animationDuration:`${Math.random() * 5 + 5}s`,
+
 
 
 })
@@ -21,8 +22,8 @@ const FireFliesBackground = () => {
         const addFireflyPeriodically = () => {
             const newFirefly = createFirefly();
             setFireflies(currentFireFlies => [ 
-                ...currentFireFlies,
-                newFirefly
+                ...currentFireFlies.slice(-14),
+                newFirefly,
             ]);
         };
 
@@ -34,14 +35,14 @@ const FireFliesBackground = () => {
 
 
   return (
-    <div className='fixed top-0 w-full h-full -z-10 overflow-hidden'> <h1> test </h1>
+    <div className='fixed top-0 w-full h-full -z-10 overflow-hidden'> 
     {
         fireflies.map((firefly) => {
             return <div key={firefly.id}
             className='absolute rounded-full bg-accent w-[20px] h-[20px]'
             style={{
                 top: firefly.top,
-                left: firefly.top,
+                left: firefly.left,
                 animation: `move ${firefly.animationDuration} infinite alternate `
 
 
